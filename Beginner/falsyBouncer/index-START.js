@@ -6,9 +6,22 @@ E.g  falsyBouncer([1, 0, null, '', 5]) // should return [1,5]
 */
 
 
+// function falsyBouncer(array) {
+//     let truthyArray = []
+
+//     array.forEach(el => {
+//         if(!!el == true){
+//             truthyArray.push(el)
+//         }
+//     })
+    
+//     return truthyArray
+// }
+
 function falsyBouncer(array) {
-    // Code goes here
+    return array.filter(el => !!el === true)
 }
 
+console.log(falsyBouncer([1, 0, null, '', 5]))
 
 module.exports = falsyBouncer
